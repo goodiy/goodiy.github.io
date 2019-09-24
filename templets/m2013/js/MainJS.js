@@ -6,7 +6,7 @@ $('document').ready(function(){
         animationLoop: false,
         controlNav: false, 
         slideshow: false,
-        animationDuration: 300
+        animationDuration: 200
     });
                 
     $('.flexslider-bgslider').flexslider({
@@ -15,7 +15,7 @@ $('document').ready(function(){
         animationLoop: false,
         controlNav: false, 
         slideshow: true,
-        animationDuration: 600
+        animationDuration: 400
     });
    
     if($('div#MainNav').css("margin-top", "-85px")) // Default hide navigation
