@@ -435,6 +435,7 @@ span.Comments {
 	border: 1px solid #dedede;
 	background: white;
 	margin: 0px 23px 10px 23px;
+	
 }
 
 #BlogPosts li h2 a {
@@ -777,7 +778,7 @@ input.readMore {
 }
 
 .quote:before {
-	content: ",,";
+	content: "";
 	font-size: 60px;
 	font-family: 'Lobster', cursive;
 	padding: 0;
@@ -786,7 +787,7 @@ input.readMore {
 
 .quote:after {
 	padding: 0;
-	content: ",,";
+	content: "";
 	font-size: 60px;
 	line-height: 0px;
 	font-family: 'Lobster', cursive;
