@@ -796,3 +796,29 @@ input.readMore {
 #BlogSContentWrapper h3 {
 	margin-top: 40px;
 }
+/************************************/
+/*                                  */
+/*      BLOG -qu shi tu     */
+/*                                  */
+/************************************/
+main .zhong .zhong-top4{
+    text-align: center;
+    line-height: 450px;
+}
+main .zhong .zhong-top4 img{
+    text-align: center;
+    line-height: 450px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+/************************************/
+/*                                  */
+/*         BLOG -biao ge            */
+/*                                  */
+/************************************/
+
+/*         表格固定布局            */
+table{table-layout: fixed;word-break: break-all; word-wrap: break-word;}
+/*         超出部分显示省略号           */
+.award-name{-o-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;width:100%;}
