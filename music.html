@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>jQuery导航图片全屏滚动代码 - 站长素材</title>
+
+<!--  Baidu Tongji-->
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2da785c32d48003faac600975fe25e29";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!--默认样式-->
+<link rel="stylesheet" href="css/reset.css">
+
+<!--响应式框架-->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+<!--css3动画库-->
+<link rel="stylesheet" href="css/animate.css">
+
+<!--banner大图基础样式-->
+<link rel="stylesheet" href="css/slick.css">
+
+<!--页面滚动基础样式-->
+<link rel="stylesheet" href="css/jquery.fullPage.css" />
+
+<!--导航样式-->
+<link rel="stylesheet" href="css/head.css" />
+
+<!--图片和滚屏样式-->
+<link rel="stylesheet" href="css/index.css">
+<!--音乐播放器样式-->
+<link rel="stylesheet" href="css/music.css">
+</head>
+<body>
+<!-- 导航 -->
+<header class="header"> 
+	<div class="container clearfix"> 
+		<div class="fr nav"> 
+			<ul class="navbar_nav" data-in="fadeInDown" data-out="fadeOutUp">
+				<li class="active">
+					<a href="javascript:void(0)">首页</a>					</li>
+				<li class="dropdown">
+					<a href="javascript:void(0)">
+						业务体系						</a>
+					<div class="dropdown_menu">
+						<a href="#">Custom Menu</a>
+						<a href="#">Custom Menu</a>
+						<a href="#">Custom Menu</a>						</div>
+				</li>
+				<li class="dropdown">
+					<a href="javascript:void(0)">直营园</a>
+					<div class="dropdown_menu">
+						<a href="#">Custom Menu</a>
+						<a href="#">Custom Menu</a>
+						<a href="#">Custom Menu</a>						</div>
+				</li>
+				<li>
+					<a href="javascript:void(0)">行知资讯</a>					</li>
+				<li>
+					<a href="javascript:void(0)">关于我们</a>					</li>
+				<li>
+					<a href="javascript:void(0)">联系合作</a>					</li>
+			</ul>
+		</div>
+		<a href="javascript:void(0)" id="navToggle">
+			<span></span>
+		</a>
+	</div>
+</header>
+<!--移动端的导航-->
+<div class="m_nav">
+	<div class="top clearfix">
+		<img src="image/closed.png" alt="" class="closed" />
+	</div>
+	<div class="logo">
+		<img src="image/logo2.png" alt="" />
+	</div>
+	<ul class="ul">
+		<li>
+			<a>首页</a>
+		</li>
+		
+	  </ul>
+			<audio src="" id="mymusic"></audio>
+<div class="music"></div>
+		<div class="pic_div"> <img src="image/music/pictures/disc.png" alt="" class="disc"> <img src="image/music/pictures/default.jpg" alt="" id="music_pic"> <span class="dot"></span>
+		  <div class="music_program">
+		    <div id="prograss"></div>
+	      </div>
+		  <div class="time">
+		    <p><span id="currenttime">0:00</span><span>/</span><span id="duration">0:00</span></p>
+	      </div>
+		  10
+		  <div class="music_menu"> <span onClick="backMusic()"></span> <span onClick="playPause()" id="playbtn"></span> <span onClick="nextMusic()"></span></div>
+	    </div>
+	 
+	
+</div>
+<!-- 内容 -->
+<div id="index_main" class="index_main">
+	<!--导航-->
+	<div class="section section1">
+		<div class="index_banner">
+			<div class="item">
+				<div class="items scaleBg" style="background-image: url(image/banner1.jpg);"></div>
+				<div class="inner">
+					<div class="block_txt">
+						<h4> Goodliness,to be continued</h4>
+						<h2>让<span>美好持续</span>发生</h2>
+						<h3>我们有让美好持续发生的愿望，更有让美好持续发生的能力</h3>                            
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="items scaleBg" style="background-image: url(image/2.jpg);"></div>
+				<div class="inner">
+					<div class="block_txt">
+						<h4> Goodliness,to be continued</h4>
+						<h2>让<span>美好持续</span>发生</h2>
+						<h3>我们有让美好持续发生的愿望，更有让美好持续发生的能力</h3>                            
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="items scaleBg" style="background-image: url(image/banner2.jpg);"></div>
+				<div class="inner">
+					<div class="block_txt">
+						<h4> </h4>
+						<h2><span>0-12岁</span><br>可持续发展教育体系</h2>
+						<h3>0-3岁早教  |  3-6岁幼儿园  |  5-12岁成长衔接  |  6-12岁小学</h3>                            
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="items scaleBg" style="background-image: url(image/banner3.jpg);"></div>
+				<div class="inner">
+					<div class="block_txt">
+						<h4> </h4>
+						<h2>幼儿园园所整体解决方案</h2>
+						<h3>全程支持  |  个性服务</h3>                            
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="items scaleBg" style="background-image: url(image/banner4.jpg);"></div>
+				<div class="inner">
+					<div class="block_txt">
+						<h4>  </h4>
+						<h2>成长管理发展测评</h2>
+						<h3>科学量表  |  全面评估  |  教育指导</h3>                            
+					</div>
+				</div>
+			</div>            
+		</div>
+		<div class="left slick_txt">
+			<div class="prev slick_arrow"></div>
+		</div>
+		<div class="right slick_txt">
+			<div class="next slick_arrow"></div>
+		</div>
+					
+		<div class="number">
+			<div class="inner clearfix">
+				<span class="active">01</span>
+				<span >02</span>
+				<span >03</span>
+				<span >04</span>
+				<span >05</span>
+			</div>
+
+		</div>
+
+	</div>
+	<div class="section section1">
+				<div class="index_banner">
+			<div class="item">
+				<div class="items scaleBg" style="background-image: url(image/banner1.jpg);"></div>
+				<div class="inner">
+					<div class="block_txt">
+						<h4> Goodliness,to be continued</h4>
+						<h2>让<span>美好持续</span>发生</h2>
+						<h3>我们有让美好持续发生的愿望，更有让美好持续发生的能力</h3>                            
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="items scaleBg" style="background-image: url(image/2.jpg);"></div>
+				<div class="inner">
+					<div class="block_txt">
+						<h4> Goodliness,to be continued</h4>
+						<h2>让<span>美好持续</span>发生</h2>
+						<h3>我们有让美好持续发生的愿望，更有让美好持续发生的能力</h3>                            
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="items scaleBg" style="background-image: url(image/banner2.jpg);"></div>
+				<div class="inner">
+					<div class="block_txt">
+						<h4> </h4>
+						<h2><span>0-12岁</span><br>可持续发展教育体系</h2>
+						<h3>0-3岁早教  |  3-6岁幼儿园  |  5-12岁成长衔接  |  6-12岁小学</h3>                            
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="items scaleBg" style="background-image: url(image/banner3.jpg);"></div>
+				<div class="inner">
+					<div class="block_txt">
+						<h4> </h4>
+						<h2>幼儿园园所整体解决方案</h2>
+						<h3>全程支持  |  个性服务</h3>                            
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="items scaleBg" style="background-image: url(image/banner4.jpg);"></div>
+				<div class="inner">
+					<div class="block_txt">
+						<h4>  </h4>
+						<h2>成长管理发展测评</h2>
+						<h3>科学量表  |  全面评估  |  教育指导</h3>                            
+					</div>
+				</div>
+			</div>            
+		</div>
+		<div class="left slick_txt">
+			<div class="prev slick_arrow"></div>
+		</div>
+		<div class="right slick_txt">
+			<div class="next slick_arrow"></div>
+		</div>
+					
+		<div class="number">
+			<div class="inner clearfix">
+				<span class="active">01</span>
+				<span >02</span>
+				<span >03</span>
+				<span >04</span>
+				<span >05</span>
+			</div>
+
+		</div>
+	</div>
+	
+	<div class="section section1">
+		<div class="index_banner">
+				<div class="item">
+				<div class="items scaleBg" style="background-image: url(image/banner1.jpg);"></div>
+				<div class="inner">
+					<div class="block_txt">
+						<h4> Goodliness,to be continued</h4>
+						<h2>让<span>美好持续</span>发生</h2>
+						<h3>我们有让美好持续发生的愿望，更有让美好持续发生的能力</h3>                            
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/index_slick.js"></script>
+<script src="js/index.js"></script>
+<audio src="mp3/song.mp3" autoplay></audio>
+</body>
+<script src="js/music.js"></script>
+</html>
