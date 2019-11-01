@@ -21,6 +21,7 @@
 	}
 }
 /*banner */
+
 .index_main{
 	background: #f7f7f7;
 }
@@ -286,7 +287,7 @@
 		right:0;
 		margin: 0 auto;
 		padding: 0 20px;
-		top: 42%;
+		top: 75%;
 	}
 	.index_main .section1 .index_banner .slick-arrow{
 		display: none !important;
