@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/hivideo.css" />
     <script type="text/javascript" src="hivideo.js"></script>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2da785c32d48003faac600975fe25e29";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
     <style type="text/css">
         .main-wrap{
             margin: 0 auto;
@@ -14,23 +23,52 @@
         .main-wrap video{
             width: 100%;
         }
+		.wenzi{
+              position: relative;
+              float: left;
+              top: 7px;
+              color: #f00;
+              width: 100%;
+              height: 5px;
+              text-align: center;
+              z-index:1;
+	    .wenzi2{
+              position: relative;
+              float: left;
+              bottom: 7px;
+              color: #f00;
+              width: 100%;
+              height: 5px;
+              text-align: center;
+              z-index:1;
+}
     </style>
 	
 </head>
 <body background="assets/bj.jpg">
+    <p>
     <div class="main-wrap">
+	<a class="wenzi">恒大山水城-云海</a>
+	<a class="wenzi2">2018-11-10</a>
         <video ishivideo="true" autoplay="false" isrotate="false" autoHide="true">
-            <source src="assets/dji.mp4" type="video/mp4">
+            <source src="assets/dji.mp4" type="video/mp4" title="恒大山水城-云海">
         </video>
     </div>
+	</p>
+	<p>
 	 <div class="main-wrap">
+	 <a class="wenzi">贵州旅行-随拍</a>
+	 <a class="wenzi2">2018-01-01</a>
         <video ishivideo="true" autoplay="false" isrotate="false" autoHide="true">
-            <source src="assets/lxj.mp4" type="video/mp4">
+            <source src="assets/lxj.mp4" type="video/mp4" title="贵州旅行-随拍">
         </video>
     </div>
+	</p>
 	 <div class="main-wrap">
+	 <a class="wenzi">小区夜景-随拍</a>
+	 <a class="wenzi2">2017-10-31</a>
         <video ishivideo="true" autoplay="false" isrotate="false" autoHide="true">
-            <source src="assets/yp.mp4" type="video/mp4">
+            <source src="assets/yp.mp4" type="video/mp4" title="第一次随拍夜景">
         </video>
     </div>
 </body>
