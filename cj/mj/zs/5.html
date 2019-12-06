@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>NEW币圈-社交产生价值-创新积累财富</title>
+		<meta name="description" content="区块链，虚拟币，比特币，BTC，以太坊，ETH，莱特币，LTC，数字货币，创新，科技，矿机" />
+		<meta name="keywords" content="比特币,挖矿,区块链,免费挖币,免费矿机，行情" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=480" />
+		<link href="../../../favicon.ico" rel="SHORTCUT ICON">
+		<!--  Baidu Tongji-->
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2da785c32d48003faac600975fe25e29";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+		<!--  YeMian Fangwen Tongji-->
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<style>
+			.p10{text-indent:2em;}
+		</style>
+        <link rel="stylesheet" href="../../../templets/m2013/css/reset.css" />
+        <link rel="stylesheet" href="../../../templets/m2013/css/mainCssRed.css" />
+		
+        <script type="text/javascript" src="../../../templets/m2013/js/klass.min.js"></script>
+        <script type="text/javascript" src="../../../templets/m2013/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../../../templets/m2013/js/flexslider.js"></script>
+        <script type="text/javascript" src="../../../templets/m2013/js/MainJS.js"></script>
+		
+        <!--        Hides URL bar on iPhone-->
+        <script type="application/x-javascript">
+            if (navigator.userAgent.indexOf('iPhone') != -1) {
+            addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+            }, false);
+            }
+
+            function hideURLbar() {
+            window.scrollTo(0, 1);
+            }
+
+        </script>
+    </head>
+    <body>
+        <!--            headlineSection-->
+<div id="Headline">
+    <h1><img src="../../../templets/m2013/img/logo2.png" alt="GOODIY-NEW币圈"></h1>
+</div> 
+<!--            Main Nav Section-->
+<div id="MainNav">
+    <div class="flexslider-nav"> 
+        <ul class="slides">
+                         <li>
+                            <a href="../../../news.html">
+                                <p>资讯</p><p class="NavItemInfo">NEWS</p>
+                            </a>
+                            <a href="../../../course.html">
+                                <p>教程</p><p class="NavItemInfo">COURSE</p>
+                            </a>
+                            <a href="../../../huodong.html">
+                                <p>活动</p><p class="NavItemInfo">EVENTS</p>
+                            </a>
+                            <a href="../../../cijie.html">
+                                <p>词解</p><p class="NavItemInfo">EXPLAIN</p>
+                            </a>
+							 <a href="../../../about.html">
+                                <p>块链</p><p class="NavItemInfo">QUKUAIL</p>
+                            </a>
+                        </li>
+        </ul>
+    </div>
+</div>
+<ul id="ShowingRibbons">
+    <li id="RBNShowMenu"><img src="../../../templets/m2013/img/RED/dropdown_show.png" alt="Show Menu" /></li>
+    <li><a href="../../../index.html"><img src="../../../templets/m2013/img/RED/dropdown_index.png" alt="Back to homepage" /></a></li>
+</ul> 
+        <!--        main Content-->
+        <div class="ContentWrapper" id="HomeContentWrapper">
+            <span class="BigComments"></span>
+            <h2>UTXO与Account模型剖析</h2>
+            <p class="BlogInfo" align="left">日期:2019.4.19 编辑:goodiy <span id="busuanzi_container_page_pv"> VIEW: <span id="busuanzi_value_page_pv"></span></span></p>
+            <p style="font-weight:bold" class="p10">UTXO 模型剖析<br /></p>
+			<p class="p10">
+在比特币的网络中，UTXO(Unspent Transaction Output 未花费交易输出)是比特币交易的基本单位，通过交易的输入和输出，比特币网络将金钱变化成一段数据结构，区别于信用卡支付必须在加密安全网络中传输，比特币的数据可以在任何不一定安全的网络中传输 ( W i F i 、蓝牙，N F C，表格等 ) 。
+ <br /></p>
+			<p class="p10">
+UTXO可以是“一聪”(1×10-9 BTC)的任意整数倍。尽管UTXO可以是小于2100万的任意数值，但是一旦UTXO被创造出来，只能作为一个整体被花掉。如果一笔交易需要的BTC小于某一个UTXO的值，那么该UTXO依然会被当做一个整体花费掉，并形成一个找零的UTXO。
+<br /></p>			
+			<p class="p10">
+UTXO可以看做被私钥的拥有者锁定的、并被整个比特币网络识别的比特币货币单位。
+<br /></p>
+			<p class="p10">
+在UTXO模型中，被某一个交易消耗的UTXO被称为交易输入，由交易创建的UTXO被称为交易输出。通过这种方式，一定量的比特币在不同的私钥所有者之间转移，并在交易链条中不断消耗和创建新的UTXO。一笔比特币交易通过所有者的私钥签名来解锁UTXO，并通过使用新的所有者的比特币地址来锁定并创建 UTXO。在比特币网络的起 始的阶段，矿工通过一种特殊的交易类型，Coinbase交易创造的交易的输出(该交易没有输入)，所产生的比特币，可以用于创建其他的UTXO。
+<br /></p>
+			<p class="p10">
+UTXO 被每一个全节点(Full Node)比特币客户端在一个储存于内存中的数据库所追踪，该数据库也被称为“UTXO集”或者“UTXO池”，新的交易构建时从UTXO池中消耗一个或多个输出，而比特币网络监测着以百万为单位的所有可用的UTXO，世界上在比特币网络中并不存在“比特币余额”的概念，因为比特币网络上只会记录所有未花费的UTXO，比特币的余额的概念更多是通过比特币钱包客户端派生出来的产物，比特币钱包通过扫区块链并聚合所有属于该用户的UTXO来计算该用户的余额。
+<br /></p>
+			<p class="p10">
+另外关于交易费用的问题，我们可以通过计算输入和输出的差额，来计算一笔交易的交易费用。
+<br /></p>
+			<img class="HeadlineImg" src="img/mjzs0010.jpg" alt="Blog Image" />
+			<p class="p10">
+比特币网络中的交易输入和输出数据结构:
+<br /></p>
+			<p class="p10">
+表1 比特币交易输入数据结构
+<br /></p>			
+            <img class="HeadlineImg" src="img/mjzs0011.jpg" alt="Blog Image" />
+			<p class="p10">
+表2 比特币交易输出数据结构
+<br /></p>	
+            <img class="HeadlineImg" src="img/mjzs0012.jpg" alt="Blog Image" />			
+			<p class="p10">
+由于每一个比特币的全客户端都会对每一笔交易按照一系列的规则，进行独立校验，一笔比特币交易所有的交易信息都包含在脚本中，如果任何一个节点按照脚本执行，并对 结果的有效性进行了校验，那么其他所有节点必将得到一致性的校验结果，这也意味着一笔有效的交易对所有人都是有效的。
+<br /></p>	
+			<p class="p10">
+比特币网络中的每一笔交易的执行依赖于解锁脚本和锁定脚本。解锁脚本可以解决锁定脚本对某一输出值的阻碍，锁定脚本会在某一笔输出值上设置花费的条件。解锁脚本通常包含私钥的一个签名，也被称为ScriptSig，锁定脚本通常会把一个交易输出锁定到一个比特币地址上(公钥的哈希Hash值)。
+<br /></p>	
+			<p class="p10">
+比特币全节点客户端会同时执行锁定脚本和解锁脚本来验证某一笔交易的合法性。客户端会先检索输入所指向的UTXO，这个UTXO包含一个定义了花费条件的锁定脚本，然后客户端会读取试图花费这UTXO的由客户端构造的输入中所包含的解锁脚本，并执行这两个脚本。 如果从解锁脚本处复制好堆栈数据之后，再执行锁定脚本的结果为真， 那么说明解锁脚本有权使用该UTXO，并发起新的交易。
+<br /></p>		
+			<p class="p10">
+比特币在交易中使用脚本系统，与FORTH(一种编译语言)一样，脚本是简单的、基于堆栈的、并且从左向右处理，它特意被设计成非图灵完备的，没有循环(LOOP)语句的一种系统。在比特币网络中，脚本系统对数据的操作都通过堆栈完成(主堆栈和副堆栈)，堆栈是一个常用的抽象数据类型，最主要的特点就是后进先出(LIFO:Last In First Out)。
+<br /></p>	
+			<p class="p10">
+在比特币的客户端中，开发者把比特币客户端支持的脚本类型通过Standard()函数做了一个总结，在Standard()函数中包含5种类型的脚本:
+<br /></p>	
+<img class="HeadlineImg" src="img/mjzs0013.jpg" alt="Blog Image" />
+			<p class="p10">
+这5种标准的脚本类型实现了，通过公钥哈希支付、通过公钥支付、多重签名、通过脚本哈希支付、以及数据输出的功能。通过这5种标准的脚本类型，比特币客户端可以实现较复杂的支付逻辑。另外，一个非标准化的脚本类型也有可能被创建，但是必须找到一个愿意打包该非标准化的交易的矿工，该非标准化的 脚本才会被执行。
+<br /></p>	
+			<p class="p10">
+我们以P2PKH(Pay to publickey hash)为例，来说明脚本的产生和执行过程。假设我们需要向某一个面包店支付0.01BTC 来购买面包，面包店的地址为:Bread Address。
+<br /></p>	
+			<p class="p10">
+则该交易的输出为:
+<br /></p>	
+			<p class="p10">
+OP_DUP OP_HASH160OP_EQUAL OP_CHECKSIG
+<br /></p>	
+			<p class="p10">
+锁定脚本对应的解锁脚本为:
+<br /></p>	
+			<p class="p10">
+<Bread Signature> <Bread Public Key>
+<br /></p>	
+			<p class="p10">
+将两个脚本结合起来可以形成如下组合脚本:
+<br /></p>	
+			<p class="p10">
+OP_DUP OP_HASH160
+<br /></p>	
+			<p class="p10">
+Hash> OP_EQUAL OP_CHECKSIG
+<br /></p>	
+			<p class="p10">
+只有当解锁版脚本与锁定版脚本的设定条件相符合的时候，执行组合脚本时才会显示结 果为真(Ture)。要想执行组合脚本的结果为真，也就意味着，Bread Signature的签名是有Bread Address对应的私钥所签名，是一个Bread Address的有效签名，只有这 样交易执行结果才会通过(结果为真)。
+<br /></p>	
+			<p class="p10">
+虽然比特币的脚本语言包含很多的操作符，但是需要注意的是比特币脚本语言是非图灵完备的。在该脚本语言中，是没有循环功能的，这也意味着交易的复杂性有限，交易的可执行次数有限。脚本并不是一种通用的编程语言，这些限制也避免了潜在创造无限循 环或者其他复杂逻辑漏洞的支付条件，从而对比特币网络的安全性留下隐患。
+<br /></p>	
+			<p class="p10">
+在UTXO模型中，我们可以通过公开的账本清晰的追溯每一笔交易的历史记录，并且可以做到完全透明，另外UTXO模型也带来了一定的并行处理能力，可以发起多地址到多地址的交易，为可拓展性带来一定借鉴。除此之外UTXO模型也带来了一定的隐私性，用户可以通过Change address，来作为UTXO的输出地址。但是UTXO本身是无状态的，我们将通过一系列的创新的设计，实现基于UTXO类型的智能合约。
+<br /></p>	
+<p style="font-weight:bold" class="p10">Account模型剖析<br /></p>
+			<p class="p10">
+与UTXO模型不同的是，以太坊是有账户体系的，在以太坊的白皮书中，我们可以看到以太坊的账户体系:在以太坊系统中，状态是由被称为“账户”(每个账户由一个20字节的地址)的对象和在两个账户之间转移价值和信息的状态转换构成的。
+<br /></p>	
+			<p class="p10">
+以太坊的账户包含四个部分:随机数，用于确定每笔交易只能被处理一次的计数器、账户目前的、以太币余额、账户的合约代码，如果有的话、账户的存储(默认为空)
+<br /></p>	
+<img class="HeadlineImg" src="img/mjzs0014.jpg" alt="Blog Image" />
+			<p class="p10">
+以太币(Ether)是以太坊内部的主要加密燃料，用于支付交易费用。一般而言，以太坊有两种类型的账户:外部所有的账户(由私钥控制的)和合约账户(由合约代码控制)。外部所有的账户没有代码，人们可以通过创建和签名一笔交易从一个外部账户发送消息。每当合约账户收到一条消息，合约内部的代码就会被激活，允许它对内部存储进行读取和写入，和发送其它消息或者创建合约。
+<br /></p>	
+			<p class="p10">
+在以太坊系统中，通过一个有状态的账户系统来记录账户余额，每个账户余额的增加/减少更像现实世界中的银行记账方式，每产生一个新的区块，都会可能对全局状态造成 影响。每个账户都有自己的余额、存储和代码区域。这样合约就可以调用账户或者地址， 并且把相应的执行结果在存储区域进行存储。
+<br /></p>	
+			<p class="p10">
+在目前以太坊的账户系统中，通过 client 可以进行一对一的转账，也就意味着每次只能从一个账户转移到另外一个账户。尽管通过智能合约可以发送到更多的账户，但是这些内部交易只能在用户的账户余额上显示，却很难在以太坊的公开账本上追踪。
+<br /></p>	
+
+		  <p class="p10">
+				出品 | 来自网络<br /></p>
+		   <p align="right">来源:区块网</p>
+        </div>
+        <!--            footer section-->
+<div id="footer">
+     <span>
+        <a  target="_blank" href="https://lianxin.quarkblockchain.cn/register?code=Rha43U"><img src="../../../templets/m2013/img/socialIcons/lianxin.png" alt="链信注册" /></a>
+        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=610321606&site=qq&menu=yes"><img src="../../../templets/m2013/img/socialIcons/tel.png" alt="问题反馈" /></a>
+        <a target="_blank" href="../../../hangqing.html"><img src="../../../templets/m2013/img/socialIcons/hangqing.png" alt="币圈行情" /></a>
+		
+    </span>
+</div> 
+		
+    </body>
+</html>
