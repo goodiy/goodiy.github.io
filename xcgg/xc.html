@@ -31,6 +31,8 @@ var _hmt = _hmt || [];
         <script type="text/javascript" src="../templets/m2013/js/jquery.min.js"></script>
         <script type="text/javascript" src="../templets/m2013/js/flexslider.js"></script>
         <script type="text/javascript" src="../templets/m2013/js/MainJS.js"></script>
+		<script src="../js/clipboard.min.js"></script>
+        <script src="../js/jquery-3.3.1.min.js"></script>
 		
         <!--        Hides URL bar on iPhone-->
         <script type="application/x-javascript">
@@ -121,7 +123,7 @@ var _hmt = _hmt || [];
 			 <p class="p10">
 好吧！这也是我未来的梦想！
 <br /></p>			  
-			  
+			  <br />
 			<p style="font-weight:bold" class="p10">打起精神，重点来啦！！<br /></p>
 
 			 <p class="p10">
@@ -151,9 +153,13 @@ var _hmt = _hmt || [];
                 <a href="https://lianxin.quarkblockchain.cn/register?code=Rha43U" target="_blank"> <img src="img/jrwm.png" alt="点击加入我们"></a>
             </p>
 			 <p class="p10">
-最后送您下一句话
+最后再送您下面一句话
 <br /></p>
+
 			  <img class="HeadlineImg" src="./img/ykdzq.jpg" alt="Blog Image" />
+<p class="p10">
+身体是本钱，早睡早起身体好。劳累奔波一天休息休息吧！
+<br /></p>
 			  <p style="font-weight:bold" class="p10">如果您不明白下面还有1分钟系列视频教程！！<br /></p>
 			<!--            Quote-->
             <div class="TwoTapes">
@@ -163,10 +169,22 @@ var _hmt = _hmt || [];
             <p class="quote">
                 <a href="../course.html" target="_blank"> <img src="./img/kjc.png" alt="看视频教程"></a>
             </p>
-		  <p class="p10">
-				出品 | GOODIY<br /></p>
+
+		   <div ><span class="p10" id="btn" data-clipboard-text="https://goodiy.github.io">【点击复制网址】 https://goodiy.github.io</span></div>
+           <div class="p10" id="show" style="display: none;">已复制</div>
 		   <p align="right">来源:NEW币圈</p>
+           
         </div>
+		<!--            Fuzhi Wangzhi  -->
+		
+		<script>
+	var btn=document.getElementById('btn');
+	var clipboard=new Clipboard(btn);
+	clipboard.on('success', function(e){
+		$('#show').slideDown().delay(1500).slideUp(300);
+		console.log(e);
+	});
+</script>
         <!--            footer section-->
 <div id="footer">
      <span>
